@@ -22,9 +22,15 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
+<<<<<<< HEAD
 51512
 Successfully changed project path to: /Users/user/Documents/GitHub/AmbAl28.github.io
 /Users/user/Documents/GitHub/AmbAl28.github.io
+=======
+53092
+Successfully changed project path to: C:/Projects/My project
+C:/Projects/My project
+>>>>>>> 3ba6cb900d53940b0f03c5b65043db085a7c0852
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -56,9 +62,15 @@ Successfully changed project path to: /Users/user/Documents/GitHub/AmbAl28.githu
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< HEAD
 Player connection [7952830464] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 2876671854 [EditorId] 2876671854 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
 Player connection [7952830464] Host "[IP] 192.168.0.107 [Port] 0 [Flags] 2 [Guid] 2876671854 [EditorId] 2876671854 [Version] 1048832 [Id] OSXEditor(0,MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+=======
+Player connection [8352] Host "[IP] 172.27.240.1 [Port] 0 [Flags] 2 [Guid] 944041657 [EditorId] 944041657 [Version] 1048832 [Id] WindowsEditor(7,WIN-QKDOOVJRCP5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [8352] Host "[IP] 172.27.240.1 [Port] 0 [Flags] 2 [Guid] 944041657 [EditorId] 944041657 [Version] 1048832 [Id] WindowsEditor(7,WIN-QKDOOVJRCP5) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+>>>>>>> 3ba6cb900d53940b0f03c5b65043db085a7c0852
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
 Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
@@ -73,6 +85,7 @@ Metal devices available: 1
 Using device Apple M1 (high power)
 Initializing Metal device caps: Apple M1
 Initialize mono
+<<<<<<< HEAD
 Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.15f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.15f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2022.3.15f1/Unity.app/Contents/MonoBleedingEdge/etc'
@@ -87,11 +100,30 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.192 seconds
 Domain Reload Profiling: 501ms
 	BeginReloadAssembly (119ms)
+=======
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.15f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.15f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56652
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.15f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007339 seconds.
+- Loaded All Assemblies, in  0.561 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.435 seconds
+Domain Reload Profiling: 995ms
+	BeginReloadAssembly (157ms)
+>>>>>>> 3ba6cb900d53940b0f03c5b65043db085a7c0852
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< HEAD
 	RebuildCommonClasses (31ms)
 	RebuildNativeTypeToScriptingClass (9ms)
 	initialDomainReloadingComplete (35ms)
@@ -114,6 +146,30 @@ Domain Reload Profiling: 501ms
 			BeforeProcessingInitializeOnLoad (1ms)
 			ProcessInitializeOnLoadAttributes (102ms)
 			ProcessInitializeOnLoadMethodAttributes (32ms)
+=======
+	RebuildCommonClasses (49ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (82ms)
+	LoadAllAssembliesAndSetupDomain (256ms)
+		LoadAssemblies (154ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (254ms)
+			TypeCache.Refresh (251ms)
+				TypeCache.ScanAssembly (227ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (436ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (326ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (10ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (218ms)
+			ProcessInitializeOnLoadMethodAttributes (75ms)
+>>>>>>> 3ba6cb900d53940b0f03c5b65043db085a7c0852
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -121,10 +177,15 @@ Domain Reload Profiling: 501ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 - Loaded All Assemblies, in  0.165 seconds
+=======
+- Loaded All Assemblies, in  0.371 seconds
+>>>>>>> 3ba6cb900d53940b0f03c5b65043db085a7c0852
 Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.252 seconds
 Domain Reload Profiling: 417ms
 	BeginReloadAssembly (98ms)
@@ -167,6 +228,49 @@ Unloading 383 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 3 unused Assets / (43.3 KB). Loaded Objects now: 867.
 Memory consumption went from 69.5 MB to 69.5 MB.
 Total: 2.059125 ms (FindLiveObjects: 0.034500 ms CreateObjectMapping: 0.009833 ms MarkObjects: 1.942416 ms  DeleteObjects: 0.071667 ms)
+=======
+- Finished resetting the current domain, in  0.484 seconds
+Domain Reload Profiling: 854ms
+	BeginReloadAssembly (239ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (56ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (29ms)
+		LoadAssemblies (142ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (24ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (9ms)
+			ScanForSourceGeneratedMonoScriptInfo (3ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (485ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (301ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (51ms)
+			ProcessInitializeOnLoadAttributes (200ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 383 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (48.8 KB). Loaded Objects now: 867.
+Memory consumption went from 67.5 MB to 67.4 MB.
+Total: 4.722900 ms (FindLiveObjects: 0.216200 ms CreateObjectMapping: 0.041700 ms MarkObjects: 4.314100 ms  DeleteObjects: 0.148000 ms)
+>>>>>>> 3ba6cb900d53940b0f03c5b65043db085a7c0852
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
@@ -183,6 +287,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:CustomObjectIndexerAttribute: 43b350a4d6e6d1791af0b5038c4bea17 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< HEAD
   Time since last request: 427091.209260 seconds.
   path: Assets/Model/Карта/шероховатости Текстура карты.png
   artifactKey: Guid(9c0cc4371def43c4e86633a67f27f4ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -197,3 +302,11 @@ Received Import Request.
 Start importing Assets/Model/Карта/Карта главная 1Текстура карты.png using Guid(c6454b2305b2cbc47bddc1c2ad9767cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da731dc7ffcb7cd6694c6e51cd54d1e7') in 0.008037 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
+=======
+  Time since last request: 608859.695609 seconds.
+  path: Assets/Model/2 карта.obj
+  artifactKey: Guid(0ad4ac8383cefe54e9ce03df5579366c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Model/2 карта.obj using Guid(0ad4ac8383cefe54e9ce03df5579366c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80634bcdf890a2bc588cadf1c88b1b57') in 0.538740 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+>>>>>>> 3ba6cb900d53940b0f03c5b65043db085a7c0852
