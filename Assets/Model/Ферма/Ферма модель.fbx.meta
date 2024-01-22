@@ -3,27 +3,7 @@ guid: ad010ec58606d3949a39933054e64885
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "\u0411\u0430\u043B\u043A\u0430 \u0432 \u0444\u0435\u0440\u043C\u0435"
-    second: {fileID: 2100000, guid: 03ded2446742f8e42a448af696736b4b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "\u041A\u0440\u044B\u0448\u0430 \u0444\u0435\u0440\u043C\u044B"
-    second: {fileID: 2100000, guid: ebb79cc1ba2d1a64f8511e604746e571, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "\u0421\u0442\u043E\u043B\u0431 \u0432 \u0444\u0435\u0440\u043C\u0435"
-    second: {fileID: 2100000, guid: 696801383ade188469c231dd985d50ad, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "\u0424\u0435\u0440\u043C\u0430 \u043E\u0441\u043D\u043E\u0432\u0430"
-    second: {fileID: 2100000, guid: 9ab39f292388cff448acbec15fd9a4bb, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
