@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class DayNightCycle : MonoBehaviour
 {
-    public float dayNightDuration = 600f; // Длительность цикла дня и ночи в секундах (10 минут)
+    public float dayNightDuration = 60f; // Длительность цикла дня и ночи в секундах (10 минут)
     private float rotationSpeed;
+    private Light directionalLight;
+
+    public Gradient dayNightColorGradient;
 
     void Start()
     {
         rotationSpeed = 180f / dayNightDuration; // Угловая скорость вращения, чтобы завершить цикл за указанное время
+        directionalLight = GetComponentInChildren<Light>();
     }
 
     void Update()
@@ -20,18 +24,25 @@ public class DayNightCycle : MonoBehaviour
         if (currentRotation > 180)
             currentRotation -= 360;
 
-        // Изменение интенсивности света в зависимости от положения солнца
-        Light directionalLight = GetComponentInChildren<Light>();
-        if (directionalLight != null)
+        // Резкое изменение интенсивности при достижении угла 0 или 180 градусов
+        if (Mathf.Approximately(currentRotation, 0f) || Mathf.Approximately(currentRotation, 180f) || (currentRotation < 0))
         {
-            directionalLight.intensity = Mathf.Clamp01(1 - Mathf.Abs(currentRotation / 180f));
+            directionalLight.intensity = 0f;
         }
+        else
+        {
+            // Изменение интенсивности света в зависимости от положения солнца
+            directionalLight.intensity = Mathf.Lerp(0.5f, 1.5f, Mathf.Abs(currentRotation) / 180f);
+        }
+
+        // Изменение цвета света в зависимости от угла поворота
+        directionalLight.color = dayNightColorGradient.Evaluate(Mathf.Abs(currentRotation) / 180f);
 
         // Если нужно выполнить какие-то дополнительные действия в определенные моменты дня/ночи, вы можете добавить соответствующие условия здесь.
         // Например, if (currentRotation < 10) { // Действия для рассвета }
 
         // Дополнительные действия при достижении положения солнца (0 градусов)
-        if (Mathf.Abs(currentRotation) < 0.1f)
+        if (Mathf.Approximately(currentRotation, 0.1f))
         {
             // Действия, которые нужно выполнить, когда солнце находится в определенном положении (например, смена дня на ночь)
         }
