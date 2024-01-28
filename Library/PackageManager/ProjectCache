@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: /Users/user/Documents/GitHub/last-summer.unity/Packages/manifest.json
+    m_FilePath: C:/Projects/last-summer.unity/last-summer.unity/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638416400500000000
-    m_Hash: 3182294754
+      ticks: 638419501764302858
+    m_Hash: 2280894791
   m_LockFileStatus:
-    m_FilePath: /Users/user/Documents/GitHub/last-summer.unity/Packages/packages-lock.json
+    m_FilePath: C:/Projects/last-summer.unity/last-summer.unity/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638416400500000000
-    m_Hash: 3447410513
+      ticks: 638419501764302858
+    m_Hash: 3897849047
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: /Users/user/Documents/GitHub/last-summer.unity/Packages
+m_ProjectPath: C:/Projects/last-summer.unity/last-summer.unity/Packages
 m_EditorVersion: 2022.3.15f1 (b58023a2b463)
 m_ResolvedPackages:
 - packageId: com.unity.terrain-tools@5.0.4
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 5.0.4
   source: 1
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.terrain-tools@5.0.4
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.terrain-tools@5.0.4
   assetPath: Packages/com.unity.terrain-tools
   name: com.unity.terrain-tools
   displayName: Terrain Tools
@@ -126,7 +126,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.6
   source: 1
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.textmeshpro@3.0.6
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.textmeshpro@3.0.6
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -311,7 +311,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.ai@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.ai@1.0.0
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -366,7 +366,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.androidjni@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.androidjni@1.0.0
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -420,7 +420,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.animation@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.animation@1.0.0
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -475,7 +475,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.assetbundle@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -530,7 +530,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.audio@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.audio@1.0.0
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -585,7 +585,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.cloth@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.cloth@1.0.0
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -644,7 +644,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.director@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.director@1.0.0
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -707,7 +707,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.imageconversion@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -763,7 +763,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.imgui@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.imgui@1.0.0
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -818,7 +818,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.jsonserialize@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -873,7 +873,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.particlesystem@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -928,7 +928,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.physics@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.physics@1.0.0
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -983,7 +983,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.physics2d@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.physics2d@1.0.0
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -1038,7 +1038,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.screencapture@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.screencapture@1.0.0
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -1097,7 +1097,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.terrain@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.terrain@1.0.0
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -1152,7 +1152,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.terrainphysics@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -1215,7 +1215,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.tilemap@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.tilemap@1.0.0
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -1273,7 +1273,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.ui@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.ui@1.0.0
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -1328,7 +1328,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.uielements@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.uielements@1.0.0
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -1395,7 +1395,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.umbra@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.umbra@1.0.0
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -1450,7 +1450,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.unityanalytics@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -1513,7 +1513,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.unitywebrequest@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -1568,7 +1568,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -1631,7 +1631,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.unitywebrequestaudio@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -1694,7 +1694,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.unitywebrequesttexture@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -1757,7 +1757,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.unitywebrequestwww@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -1836,7 +1836,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.vehicles@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.vehicles@1.0.0
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -1895,7 +1895,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.video@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.video@1.0.0
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -1962,7 +1962,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.vr@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.vr@1.0.0
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -2031,7 +2031,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.wind@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.wind@1.0.0
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -2086,7 +2086,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.xr@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.xr@1.0.0
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -2153,7 +2153,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.modules.subsystems@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.modules.subsystems@1.0.0
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -2212,7 +2212,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/user/Documents/GitHub/last-summer.unity/Library/PackageCache/com.unity.ugui@1.0.0
+  resolvedPath: C:\Projects\last-summer.unity\last-summer.unity\Library\PackageCache\com.unity.ugui@1.0.0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI

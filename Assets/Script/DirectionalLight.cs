@@ -31,8 +31,11 @@ public class DayNightCycle : MonoBehaviour
         }
         else
         {
-            // Изменение интенсивности света в зависимости от положения солнца
-            directionalLight.intensity = Mathf.Lerp(0.5f, 1.5f, Mathf.Abs(currentRotation) / 180f);
+            if (((currentRotation > 0f) || (currentRotation < 20f)) || ((currentRotation > 160f) || (currentRotation < 180f)))
+            {
+                // Изменение интенсивности света в зависимости от положения солнца
+                directionalLight.intensity = Mathf.Lerp(0f, 1f, Mathf.Abs(currentRotation) / 20f);
+            }
         }
 
         // Изменение цвета света в зависимости от угла поворота
