@@ -8,9 +8,9 @@ public class RigidbodyMovement : MonoBehaviour
     private bool isGrounded;
     private float jumpForce = 2f;
 
-    [SerializeField] private int startHealth; //Здоровье при старте
     [SerializeField] private PlayerUI ui;
-    private int health; //Здоровье
+    private int _phone; //Экран телефона
+    [SerializeField] private int Nphone;
 
     [SerializeField] protected float movementSpeed = 3f;
     protected Vector3 movementVector;
@@ -20,7 +20,7 @@ public class RigidbodyMovement : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         Anim = GetComponent<Animator>();
-        health = startHealth;
+        _phone = 0;//Установить экран телефона при старте
     }
 
     private void FixedUpdate()
@@ -58,6 +58,21 @@ public class RigidbodyMovement : MonoBehaviour
             Jump();
             Anim.SetBool("isJump", true);
         }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            // Debug.Log(message: Nphone);
+            // Debug.Log(message: _phone);
+            _phone = _phone + Nphone; //Переключаем экраны на телефоне
+            ui.SetPhone(_phone); //Местод вызывающий включение или выключение экрана
+
+            if (_phone >= 4)
+            {
+                _phone = 0;
+                ui.SetPhone(_phone);
+                Debug.Log(message: "Телефон убрал");
+            }
+        }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -77,20 +92,4 @@ public class RigidbodyMovement : MonoBehaviour
     {
         rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
-
-    // public void GetDamage(int damage)
-    // {
-    //     health = health - damage; //Отнимаем домаг от здоровья при домаге
-    //     ui.SetHealth(health);
-
-    //     if (health <= 0)
-    //     {
-
-    //     }
-    // }
-
-    // private void Hit()
-    // {
-
-    // }
 }
