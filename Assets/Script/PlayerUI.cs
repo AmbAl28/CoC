@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerUI : MonoBehaviour
 {
+    // [SerializeField] private GameObject[] infoText;
     [SerializeField] private GameObject[] phones; //массив с изображениями экранов
     public void SetPhone(int phone) //Публичный метод принимающий в себя какой экран показать
     {
@@ -13,4 +14,5 @@ public class PlayerUI : MonoBehaviour
             phones[i].SetActive(phone > i); //SetActive включает и выключает видимость объекта на UI экране
         }
     }
+
 }

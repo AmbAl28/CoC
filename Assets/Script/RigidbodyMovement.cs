@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -10,7 +11,6 @@ public class RigidbodyMovement : MonoBehaviour
 
     [SerializeField] private PlayerUI ui;
     private int _phone; //Экран телефона
-    [SerializeField] private int Nphone;
 
     [SerializeField] protected float movementSpeed = 3f;
     protected Vector3 movementVector;
@@ -37,32 +37,51 @@ public class RigidbodyMovement : MonoBehaviour
 
         Anim.SetBool("isLeft", Input.GetKey(KeyCode.A));// Код, который будет выполнен, если клавиша "A" нажата
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        //Ускорение
+        if (isGrounded && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
         {
             movementSpeed = 5f;
-            Anim.SetBool("isShiftRun", Input.GetKey(KeyCode.LeftShift));// Код, который будет выполнен, если клавиша "LeftShift" нажата
+            Anim.SetBool("isShiftRun", Input.GetKey(KeyCode.LeftShift));
         }
         else
         {
             movementSpeed = 3f;
-            Anim.SetBool("isShiftRun", Input.GetKey(KeyCode.LeftShift));// Код, который будет выполнен, если клавиша "LeftShift" нажата
+            Anim.SetBool("isShiftRun", false);
         }
-        // if (Imput.GetMouseButton(0)) //удар при клике
-        // {
-        //     Hit();
-        // }
+
+        // Удар по зажатии левой кнопки мыши
+        if (Input.GetMouseButton(0))
+        {
+            Anim.SetBool("isCombat", true);
+            //     Hit();
+        }
+        else
+        {
+            Anim.SetBool("isCombat", false);
+        }
+
         //Anim.SetBool(name: "isWalk", value: movementVector.magnitude > 0.1f);
 
+        //Перекат 
+        if (isGrounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
+        {
+            Anim.SetBool("isRoll", Input.GetKey(KeyCode.LeftControl));
+        }
+        else Anim.SetBool("isRoll", false);
+
+        //Падение, подрыгнуть
         if (isGrounded && Input.GetKey(KeyCode.Space))
         {
-            Jump();
+            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             Anim.SetBool("isJump", true);
         }
+
+        //Достать инвентарь
         if (Input.GetKeyDown(KeyCode.I))
         {
             // Debug.Log(message: Nphone);
             // Debug.Log(message: _phone);
-            _phone = _phone + Nphone; //Переключаем экраны на телефоне
+            _phone = _phone + 1; //Переключаем экраны на телефоне
             ui.SetPhone(_phone); //Местод вызывающий включение или выключение экрана
 
             if (_phone >= 4)
@@ -75,21 +94,16 @@ public class RigidbodyMovement : MonoBehaviour
 
     }
 
+    //Проверка находится ли персонаж на земле
     private void OnCollisionEnter(Collision collision)
     {
         // Считаем персонажа на земле после любого столкновения
         isGrounded = true;
         Anim.SetBool(name: "isJump", value: false);
     }
-
     private void OnCollisionExit(Collision collision)
     {
         // При отсутствии столкновения считаем, что персонаж не на земле
         isGrounded = false;
-    }
-
-    private void Jump()
-    {
-        rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 }
