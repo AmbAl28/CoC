@@ -12,7 +12,7 @@ public class RigidbodyMovement : MonoBehaviour
     [SerializeField] private PlayerUI ui;
     private int _phone; //Экран телефона
 
-    [SerializeField] protected float movementSpeed = 3f;
+    [SerializeField] protected float movementSpeed = 2f;
     protected Vector3 movementVector;
 
 
@@ -40,17 +40,17 @@ public class RigidbodyMovement : MonoBehaviour
         //Ускорение
         if (isGrounded && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
         {
-            movementSpeed = 5f;
+            movementSpeed = 4f;
             Anim.SetBool("isShiftRun", Input.GetKey(KeyCode.LeftShift));
         }
         else
         {
-            movementSpeed = 3f;
+            movementSpeed = 2f;
             Anim.SetBool("isShiftRun", false);
         }
 
         // Удар по зажатии левой кнопки мыши
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && isGrounded && !(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
         {
             Anim.SetBool("isCombat", true);
             //     Hit();
@@ -63,11 +63,11 @@ public class RigidbodyMovement : MonoBehaviour
         //Anim.SetBool(name: "isWalk", value: movementVector.magnitude > 0.1f);
 
         //Перекат 
-        if (isGrounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
-        {
-            Anim.SetBool("isRoll", Input.GetKey(KeyCode.LeftControl));
-        }
-        else Anim.SetBool("isRoll", false);
+        // if (isGrounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
+        // {
+        //     Anim.SetBool("isRoll", Input.GetKey(KeyCode.LeftControl));
+        // }
+        // else Anim.SetBool("isRoll", false);
 
         //Падение, подрыгнуть
         if (isGrounded && Input.GetKey(KeyCode.Space))
