@@ -26,19 +26,17 @@ public class RigidbodyMovement : MonoBehaviour
     private void FixedUpdate()
     {
         movementVector = (transform.right * Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") * transform.forward).normalized;
-
+        // Debug.Log(message: ("Vertical:", Input.GetAxis("Vertical"), " Horizontal:", Input.GetAxis("Horizontal")));
+        // Debug.Log(message: ("movementVector:", movementVector));
         rigidbody.MovePosition(transform.position + movementVector * movementSpeed * Time.fixedDeltaTime);
 
-        Anim.SetBool("isWalk", Input.GetKey(KeyCode.W));// Код, который будет выполнен, если клавиша "W" нажата
-
-        Anim.SetBool("isBack", Input.GetKey(KeyCode.S));// Код, который будет выполнен, если клавиша "S" нажата
-
-        Anim.SetBool("isRight", Input.GetKey(KeyCode.D));// Код, который будет выполнен, если клавиша "D" нажата
-
-        Anim.SetBool("isLeft", Input.GetKey(KeyCode.A));// Код, который будет выполнен, если клавиша "A" нажата
+        Anim.SetBool("isWalk", Input.GetAxis("Vertical") > 0);// Код, который будет выполнен, если если персонаж двигается вперёд
+        Anim.SetBool("isBack", Input.GetAxis("Vertical") < 0);// Код, который будет выполнен, если если персонаж двигается назад
+        Anim.SetBool("isRight", Input.GetAxis("Horizontal") > 0);// Код, который будет выполнен, если персонаж двигается вправа
+        Anim.SetBool("isLeft", Input.GetAxis("Horizontal") < 0);// Код, который будет выполнен, если персонаж двигается влево
 
         //Ускорение
-        if (isGrounded && Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+        if (isGrounded && Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
         {
             movementSpeed = 4f;
             Anim.SetBool("isShiftRun", Input.GetKey(KeyCode.LeftShift));
@@ -50,7 +48,7 @@ public class RigidbodyMovement : MonoBehaviour
         }
 
         // Удар по зажатии левой кнопки мыши
-        if (Input.GetMouseButton(0) && isGrounded && !(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
+        if (Input.GetMouseButton(0) && isGrounded && !(Input.GetAxis("Vertical") > 0 || Input.GetAxis("Vertical") < 0 || Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Horizontal") < 0))
         {
             Anim.SetBool("isCombat", true);
             //     Hit();

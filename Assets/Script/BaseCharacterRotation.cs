@@ -29,8 +29,6 @@ public class BaseCharacterRotation : MonoBehaviour
         yRotation += Input.GetAxis("Mouse X") * sensitivity;
         xRotation -= Input.GetAxis("Mouse Y") * sensitivity;
 
-
-
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(xRotation, yRotation, 0), Time.deltaTime * smooth);
         character.rotation = Quaternion.Lerp(character.rotation, Quaternion.Euler(0, yRotation, 0), Time.deltaTime * smooth);
 
@@ -46,6 +44,7 @@ public class BaseCharacterRotation : MonoBehaviour
         {
             xRotation = Mathf.Clamp(xRotation, 5f, 35f);
         }
+
     }
 
 
