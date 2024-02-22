@@ -29,7 +29,7 @@ public class RigidbodyMovement : MonoBehaviour
 
         rigidbody.MovePosition(transform.position + movementVector * movementSpeed * Time.fixedDeltaTime);
 
-        Anim.SetBool("isRun", Input.GetKey(KeyCode.W));// Код, который будет выполнен, если клавиша "W" нажата
+        Anim.SetBool("isWalk", Input.GetKey(KeyCode.W));// Код, который будет выполнен, если клавиша "W" нажата
 
         Anim.SetBool("isBack", Input.GetKey(KeyCode.S));// Код, который будет выполнен, если клавиша "S" нажата
 
