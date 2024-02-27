@@ -5,7 +5,7 @@ using System.Collections;
 public class RigidbodyMovement : MonoBehaviour
 {
     private float waterTime = 0f;
-    private Vector3 waterPosition = new Vector3(-24.29f, 26.169f, -3.46f);
+    private Vector3 waterPosition = new Vector3(-28.076f, 26.169f, -3.129f);
     private new Rigidbody rigidbody;
     private Animator Anim;
     private bool isGrounded;
