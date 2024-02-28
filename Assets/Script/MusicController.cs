@@ -5,7 +5,7 @@ public class MusicController : MonoBehaviour
     AudioSource audioSource;
     Transform player; // Позиция игрока
 
-    public float maxDistance = 50f;
+    public float maxDistance = 20f;
 
     void Start()
     {
