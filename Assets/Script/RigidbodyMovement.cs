@@ -9,12 +9,12 @@ public class RigidbodyMovement : MonoBehaviour
     private new Rigidbody rigidbody;
     private Animator Anim;
     private bool isGrounded;
-    private float jumpForce = 2f;
+    private float jumpForce = 1f;
 
     [SerializeField] private PlayerUI ui;
     private int _phone;
 
-    [SerializeField] protected float movementSpeed = 2f;
+    [SerializeField] protected float movementSpeed = 1f;
     protected Vector3 movementVector;
 
     private Coroutine waterTimeCoroutine; // Ссылка на корутину
@@ -51,12 +51,12 @@ public class RigidbodyMovement : MonoBehaviour
             //Ускорение
             if (isGrounded && Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
             {
-                movementSpeed = 4f;
+                movementSpeed = 3f;
                 Anim.SetBool("isShiftRun", Input.GetKey(KeyCode.LeftShift));
             }
             else
             {
-                movementSpeed = 2f;
+                movementSpeed = 1f;
                 Anim.SetBool("isShiftRun", false);
             }
 
