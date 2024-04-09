@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DayNightCycle : MonoBehaviour
 {
-    public float dayNightDuration = 5000f; // Длительность цикла дня и ночи в секундах (10 минут)
+    public float dayNightDuration = 900f; // Длительность цикла дня и ночи в секундах (10 минут)
     private float rotationSpeed;
     private Light directionalLight;
 

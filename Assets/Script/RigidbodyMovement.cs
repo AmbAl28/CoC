@@ -31,6 +31,7 @@ public class RigidbodyMovement : MonoBehaviour
     {
         if (canControlCharacter)
         {
+            CheckGrounded();
             movementVector = (transform.right * Input.GetAxis("Horizontal") + Input.GetAxis("Vertical") * transform.forward).normalized;
             // Debug.Log(message: ("Vertical:", Input.GetAxis("Vertical"), " Horizontal:", Input.GetAxis("Horizontal")));
             // Debug.Log(message: ("movementVector:", movementVector));
@@ -71,7 +72,7 @@ public class RigidbodyMovement : MonoBehaviour
                 Anim.SetBool("isCombat", false);
             }
 
-            //Падение, подрыгнуть
+            //Падение, подпрыгнуть
             if (isGrounded && Input.GetKey(KeyCode.Space))
             {
                 rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -108,6 +109,21 @@ public class RigidbodyMovement : MonoBehaviour
         }
     }
 
+    private void CheckGrounded()
+    {
+        // Опускаем луч вниз от нижней части персонажа и проверяем, соприкасается ли он с землей
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.37f))
+        {
+            isGrounded = true;
+            Debug.Log("На земле");
+        }
+        else
+        {
+            isGrounded = false;
+            Debug.Log("Не на земле");
+        }
+    }
     //Проверка находится ли персонаж на земле
     private void OnCollisionEnter(Collision collision)
     {
