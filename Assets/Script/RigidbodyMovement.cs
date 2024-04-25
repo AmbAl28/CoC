@@ -19,7 +19,7 @@ public class RigidbodyMovement : MonoBehaviour
 
     private Coroutine waterTimeCoroutine; // Ссылка на корутину
     private bool canControlCharacter = true; // Флаг, позволяющий управлять персонажем или блокировать управление
-
+    private bool isInWater = false; // Переменная, показывающая, находится ли персонаж в зоне действия триггера "Water"
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -79,18 +79,6 @@ public class RigidbodyMovement : MonoBehaviour
                 Anim.SetBool("isJump", true);
             }
 
-            // //Проверка что персонаж на тиррейне
-            // RaycastHit hit;
-            // if (Physics.Raycast(transform.position, Vector3.down, out hit))
-            // {
-            //     if (hit.collider.CompareTag("Ground"))
-            //     {
-            //         // Персонаж находится на террейне
-            //         isGrounded = true;
-            //         Debug.Log("ТЕГ На земле");
-            //     }
-            // }
-
             //Достать инвентарь
             if (Input.GetKeyDown(KeyCode.I))
             {
@@ -116,28 +104,52 @@ public class RigidbodyMovement : MonoBehaviour
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.37f))
         {
             isGrounded = true;
-            Debug.Log("На земле");
+            // Debug.Log("На земле");
+            Anim.SetBool("isJump", false);
         }
         else
         {
             isGrounded = false;
-            Debug.Log("Не на земле");
+            // Debug.Log("Не на земле");
         }
-    }
-    //Проверка находится ли персонаж на земле
-    private void OnCollisionEnter(Collision collision)
-    {
-        // Считаем персонажа на земле после любого столкновения
-        isGrounded = true;
-        Anim.SetBool("isJump", false);
-        Debug.Log("На земле");
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        // При отсутствии столкновения считаем, что персонаж не на земле
-        isGrounded = false;
-        Debug.Log("Не на земле");
 
+        // Проверяем столкновение с триггером "Water"
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 0.37f); // Ищем все коллайдеры в радиусе 0.5 от позиции персонажа
+        bool foundWater = false; // Флаг, показывающий, найден ли коллайдер "Water"
+        foreach (Collider collider in colliders)
+        {
+            if (collider.CompareTag("Water")) // Если найденный коллайдер имеет тег "Water"
+            {
+                isGrounded = false;
+                foundWater = true; // Устанавливаем флаг, что найден коллайдер "Water"
+                if (!isInWater) // Если персонаж не находился в зоне действия триггера "Water"
+                {
+                    isInWater = true; // Устанавливаем флаг, что персонаж находится в зоне действия триггера "Water"
+                    Debug.Log("Вход в Water");
+                    //         // Запускаем корутину, если она еще не была запущена
+                    if (waterTimeCoroutine == null)
+                        waterTimeCoroutine = StartCoroutine(IncreaseWaterTime());
+                    Anim.SetBool("isSwim", true);
+                    // Добавьте здесь нужные действия при входе в зону действия триггера "Water"
+                }
+                break; // Прерываем цикл, чтобы не проверять остальные коллайдеры
+            }
+        }
+
+        if (!foundWater && isInWater) // Если не найден коллайдер "Water", но персонаж находился в зоне действия триггера "Water"
+        {
+            isInWater = false; // Сбрасываем флаг, что персонаж находится в зоне действия триггера "Water"
+            Debug.Log("Выход из Water");
+            // Останавливаем корутину, если она была запущена
+            if (waterTimeCoroutine != null)
+            {
+                StopCoroutine(waterTimeCoroutine);
+                waterTimeCoroutine = null;
+            }
+            waterTime = 0f; // Сбрасываем счетчик времени в воде
+            Anim.SetBool("isSwim", false);
+            // Добавьте здесь нужные действия при выходе из зоны действия триггера "Water"
+        }
     }
 
     //Плаванье и корутина (счётчик) для увеличения waterTime каждую секунду в воде
@@ -147,10 +159,10 @@ public class RigidbodyMovement : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             waterTime += 1f;
-            Debug.Log("Water Time: " + waterTime);
+            Debug.Log("Время в Water: " + waterTime);
         }
-
     }
+    //Переносим персонажа при окончании коратина
     private IEnumerator WaitAnimationFinish()
     {
         Anim.SetBool("isSit", true);
@@ -161,32 +173,5 @@ public class RigidbodyMovement : MonoBehaviour
         Debug.Log("Можно двигаться");
         Anim.SetBool("isSit", false);
         canControlCharacter = true; // Разрешаем управление персонажем и камерой после окончания анимации
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Water"))
-        {
-            // Запускаем корутину, если она еще не была запущена
-            if (waterTimeCoroutine == null)
-                waterTimeCoroutine = StartCoroutine(IncreaseWaterTime());
-            Anim.SetBool("isSwim", true);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Water"))
-        {
-            // Останавливаем корутину, если она была запущена
-            if (waterTimeCoroutine != null)
-            {
-                StopCoroutine(waterTimeCoroutine);
-                waterTimeCoroutine = null;
-            }
-
-            Anim.SetBool("isSwim", false);
-            waterTime = 0f; // Сбрасываем счетчик времени в воде
-        }
     }
 }

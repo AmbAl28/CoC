@@ -9,6 +9,8 @@ TagManager:
   - CameraCollider
   - Interactable
   - Quest
+  - Points
+  - Weapon
   layers:
   - Default
   - TransparentFX
